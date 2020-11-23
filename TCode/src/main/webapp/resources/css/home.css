@@ -4,6 +4,12 @@
 	text-align:center;
 }
 
+.breadcrumb{
+	width: 80%;
+    margin: auto;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+
 .lay-2{
 	margin: 0 auto 10px;
 	display: inline-block;

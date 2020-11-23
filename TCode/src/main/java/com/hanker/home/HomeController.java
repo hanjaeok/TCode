@@ -1,8 +1,6 @@
-package com.hanker.Controller;
+package com.hanker.home;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
+import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +15,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
+	@Inject
+	private HomeService hs;
+	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home(Model model) {
+		
+		
 		
 		return "home";
 	}
