@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.mt-4{
+	text-align:center;
+}
+
+.lay-2{
+	margin: 0 auto 10px;
+	display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #444;
+    line-height: 200%;
+    border-bottom: 1px dashed #ddd;
+    text-shadow: 1px 1px #dedede;
+    word-break: break-word;
+    text-align:center;
+}
+
+.lay-2-body{
+	padding: 20px 15px 18px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    line-height: 180%;
+    word-break: break-all;
+    margin: auto;
+    width: 100%;
+}

@@ -1,14 +1,19 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
-</body>
-</html>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ include file="/WEB-INF/views/layout/header.jsp" %>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">HOME</h1>
+                        <div class="breadcrumb mb-4">
+                        	<div class="lay-2">전체 글</div>
+                        	<div class="lay-2-body">
+                        	
+                        	</div>
+                        </div>
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </main>
+<%@ include file="/WEB-INF/views/layout/side.jsp" %>
