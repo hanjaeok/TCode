@@ -11,6 +11,17 @@ public class t_BoardVO {
 	private Date t_regdate;		// 글 작성일
 	
 	
+	private String t_category; 	// 카테고리 (t_category 테이블)
+	
+	
+	
+	public String getT_category() {
+		return t_category;
+	}
+	public void setT_category(String t_category) {
+		this.t_category = t_category;
+	}
+	
 	public int getT_bno() {
 		return t_bno;
 	}

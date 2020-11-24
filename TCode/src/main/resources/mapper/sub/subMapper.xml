@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="subMapper">
+	
+	<select id="javaList" resultType="tbVO">
+		SELECT
+			a.t_bno,
+			a.t_title,
+			a.t_content,
+			a.t_regdate,
+			b.t_category
+		FROM
+			tcode.t_board as a
+		INNER JOIN
+			tcode.t_category as b
+		ON
+			a.t_cno = b.t_cno
+		WHERE a.t_cno = 1
+		ORDER BY 
+			a.t_regdate DESC
+	</select>
+	
+	<select id="selJavaView" resultType="tbVO">
+		SELECT
+			*
+		FROM
+			tcode.t_board
+		WHERE
+			t_bno = #{t_bno }
+	</select>
+	
+	<select id="categoryList" resultType="tbVO">
+		SELECT
+			t_cno,
+			t_category
+		FROM
+			tcode.t_category
+		ORDER BY 
+			t_category
+	</select>
+	
+	<insert id="insBoard" parameterType="tbVO">
+		INSERT INTO
+			t_board(
+				t_title,
+				t_content,
+				t_cno
+			)
+			VALUES(
+				#{t_title},
+				#{t_content},
+				#{t_cno}
+			)
+	</insert>
+	
+</mapper>

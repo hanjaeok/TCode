@@ -4,14 +4,23 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">HOME</h1>
+                        <h1 class="mt-4" style="margin-bottom: 20px;">HOME</h1>
                         <div class="breadcrumb mb-4">
-                        	<div class="lay-2">전체 글</div>
-                        	<div class="lay-2-body">
-                        	
+                        	<div class="lay-2">최근 게시 글</div>
+                        	<div class="lay-2-body list">
+                        		<c:forEach var="list" items="${list }" varStatus="status">
+                        			<ul>
+                        				<li>
+                        					<span class="category"> <b> [ ${list.t_category } ] </b></span>
+                        					<a href="#">${list.t_title }</a>
+                        					<span class="date">${list.t_regdate }</span>
+                    					</li>
+                        			</ul>
+                        		</c:forEach>
                         	</div>
                         </div>
-                        <div class="row">
+                        <div class="breadcrumb mb-4">
+                        	<div class="lay-2">그래프</div>
                             
                         </div>
                     </div>

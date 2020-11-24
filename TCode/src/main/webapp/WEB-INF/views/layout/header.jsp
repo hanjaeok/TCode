@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@ page session="false" %>
 <html lang="en">
     <head>
@@ -9,8 +10,8 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>HANKER</title>
-        <link href="resources/css/styles.css" rel="stylesheet" />
-        <link href="resources/css/home.css" rel="stylesheet" />
+        <link href="../resources/css/styles.css" rel="stylesheet" />
+        <link href="../resources/css/home.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
     </head>
@@ -35,7 +36,12 @@
                         <!-- <a class="dropdown-item" href="#">설정</a>
                         <a class="dropdown-item" href="#">로그</a>
                         <div class="dropdown-divider"></div> -->
-                        <a class="dropdown-item" href="/login">로그아웃</a>
+                        <sec:authorize access="isAnonymous()">
+                        	<a class="dropdown-item" href="/login">로그인</a>
+                        </sec:authorize>
+                        <sec:authorize access="isAuthenticated()">
+                        	<a class="dropdown-item" href="/login">로그아웃</a>
+                        </sec:authorize>
                     </div>
                 </li>
             </ul>

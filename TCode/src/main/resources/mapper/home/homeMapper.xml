@@ -3,4 +3,20 @@
 
 <mapper namespace="homeMapper">
 	
+	<select id="boardTenLim" resultType="tbVO">
+		SELECT
+			a.t_title,
+			a.t_content,
+			a.t_regdate,
+			b.t_category
+		FROM
+			tcode.t_board as a
+		INNER JOIN
+			tcode.t_category as b
+		ON
+			a.t_cno = b.t_cno
+		ORDER BY 
+			a.t_regdate DESC
+		LIMIT 0, 10
+	</select>
 </mapper>

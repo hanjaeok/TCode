@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 			<div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
@@ -29,7 +30,7 @@
                             </a>
                             <div class="collapse" id="collapseStudy" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Java</a>
+                                    <a class="nav-link" href="/sub/java">Java</a>
                                     <a class="nav-link" href="#">PHP</a>
                                     <a class="nav-link" href="#">JSP</a>
                                     <a class="nav-link" href="#">JavaScript</a>
@@ -83,6 +84,12 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-cog fa-fw"></i></div>
                                 Settings
                             </a>
+                            <sec:authorize access="isAuthenticated()">
+	                            <a class="nav-link" href="/sub/newWrite">
+	                                <div class="sb-nav-link-icon"><i class="fas fa-pencil-alt fa-fw"></i></div>
+									Write
+	                            </a>
+                            </sec:authorize>
                             <!-- <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables
@@ -111,12 +118,14 @@
                 </footer>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="../resources/js/sub.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="resources/js/scripts.js"></script>
+        <script src="../resources/js/scripts.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="resources/assets/demo/datatables-demo.js"></script>
+        <script src="../resources/ckeditor/ckeditor.js" type="text/javascript"></script>
+        <script src="../resources/assets/demo/datatables-demo.js"></script>
     </body>
 </html>
             

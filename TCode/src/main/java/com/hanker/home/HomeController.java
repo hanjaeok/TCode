@@ -1,5 +1,7 @@
 package com.hanker.home;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
@@ -8,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hanker.DTO.t_BoardVO;
 
 /**
  * Handles requests for the application home page.
@@ -21,9 +25,11 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
+	public String home(Model model) throws Exception{
 		
+		List<t_BoardVO> list = hs.boardTenLim();
 		
+		model.addAttribute("list", list);
 		
 		return "home";
 	}
