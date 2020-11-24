@@ -98,5 +98,5 @@ TCode/Users/
 .sts4-cache/
 .svg
 
-*/ckeditor/
+TCode/src/main/webapp/resources/ckeditor/
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
