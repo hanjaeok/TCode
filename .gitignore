@@ -97,4 +97,6 @@ TCode/Users/
 # Spring Boot Tooling
 .sts4-cache/
 .svg
+
+*/ckeditor/
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
