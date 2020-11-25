@@ -32,6 +32,7 @@
             		</div>
             	</main>
             	
+            	
 <%@ include file="/WEB-INF/views/layout/side.jsp" %>
 
 <script>
@@ -54,4 +55,5 @@
 				language		: lang_kor
 			});
 	});
+	
 </script>

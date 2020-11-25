@@ -66,3 +66,58 @@
 .list a:hover { 
 	color: #07a; 
 }
+
+.category{
+    border: 1px solid #ddd;
+    background-size: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 12px;
+    color: #000;
+    outline: none;
+}
+
+.javaDate{
+    position: absolute;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #555;
+    cursor: default;
+}
+
+.javaDate:before{
+	position: absolute;
+    top: 0;
+    left: -6px;
+    width: 0;
+    height: 0;
+    content: " ";
+    border-top: 20px solid #555;
+    border-left: 6px solid transparent;
+}
+.javaDate:after{
+	position: absolute;
+    bottom: 0;
+    left: -6px;
+    width: 0;
+    height: 0;
+    content: " ";
+    border-bottom: 20px solid #555;
+    border-left: 6px solid transparent;
+}
+
+.viewTitle{
+	margin: 10 0 30px;
+	text-align: center;
+}
+.back{
+	float: right;
+    margin-top: -4%;
+}
+.back a{
+	color: black;
+}

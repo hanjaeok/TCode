@@ -7,12 +7,12 @@
                         <h1 class="mt-4" style="margin-bottom: 20px;">HOME</h1>
                         <div class="breadcrumb mb-4">
                         	<div class="lay-2">최근 게시 글</div>
-                        	<div class="lay-2-body list">
+                        	<div class="lay-2-body list" id="javaList_wrapper">
                         		<c:forEach var="list" items="${list }" varStatus="status">
                         			<ul>
                         				<li>
                         					<span class="category"> <b> [ ${list.t_category } ] </b></span>
-                        					<a href="#">${list.t_title }</a>
+                        					<a href="javascript:void(0);" onclick="SUB.javaView('${list.t_bno}');">${list.t_title }</a>
                         					<span class="date">${list.t_regdate }</span>
                     					</li>
                         			</ul>

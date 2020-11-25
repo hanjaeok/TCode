@@ -5,6 +5,7 @@
 	
 	<select id="boardTenLim" resultType="tbVO">
 		SELECT
+			a.t_bno,
 			a.t_title,
 			a.t_content,
 			a.t_regdate,
