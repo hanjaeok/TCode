@@ -27,10 +27,15 @@
 
 <%@ include file="/WEB-INF/views/layout/side.jsp" %>
 <script type="text/javascript">
+	hljs.initHighlightingOnLoad();
+	
 	CKEDITOR.replace('p_content', {
 		height: 500,
 		width: 1400,
-		extraPlugins : 'exportpdf'
+		extraPlugins : 'exportpdf, codesnippet',
+		filebrowserUploadUrl: '/sub/imgUpload',
+		codeSnippet_theme: 'monokai_sublime'
+		
 	});
 	//CKEDITOR.config.width=1400;
 </script>

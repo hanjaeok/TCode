@@ -15,8 +15,8 @@ public class SubDAO {
 	@Inject
 	private SqlSession sql;
 
-	public List<t_BoardVO> javaList() throws Exception{
-		return sql.selectList("subMapper.javaList");
+	public List<t_BoardVO> javaList(String tCate) throws Exception{
+		return sql.selectList("subMapper.javaList", tCate);
 	}
 
 	public t_BoardVO selJavaView(int bno) throws Exception {
@@ -29,6 +29,14 @@ public class SubDAO {
 
 	public void insBoard(t_BoardVO tbVO) throws Exception{
 		sql.insert("subMapper.insBoard", tbVO);
+	}
+
+	public List<t_BoardVO> otherList() throws Exception{
+		return sql.selectList("subMapper.otherList");
+	}
+
+	public void bCntAdd(int bno) {
+		sql.update("subMapper.bCntAdd", bno);
 	}
 
 }

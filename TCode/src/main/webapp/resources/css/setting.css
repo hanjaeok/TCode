@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+#addBtn{
+	margin-bottom: 5px;
+	color: #000;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+#addCateBtn{
+	float: right;
+    margin-top: 7px;
+}
+.contentList{
+	width:100%;
+	color: #444;
+}
+
+#lgCName, #smCName {
+	margin-top: 5%;
+	display: initial;
+}
+
+#setCategoryList{
+	width: 100%;
+	font-size: 25px;
+	border: 1px solid #dcdcdc;
+	height: 50px;
+	text-align: left;
+	margin-top: -1px;
+}
+
+#setLargeCate, #setSmallCate {
+	padding: 5px;
+	margin-left: 3%;
+}
+
+#setSmCate{
+	padding: 12px;
+	margin-left: 6%;
+	font-size: 17px;
+}

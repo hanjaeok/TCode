@@ -4,7 +4,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4" style="margin-bottom: 20px;">HOME</h1>
+                        <h1 class="mt-4" style="margin-bottom: 20px; color: #444;">HOME</h1>
                         <div class="breadcrumb mb-4">
                         	<div class="lay-2">최근 게시 글</div>
                         	<div class="lay-2-body list" id="javaList_wrapper">

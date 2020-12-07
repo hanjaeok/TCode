@@ -16,18 +16,27 @@
 			tcode.t_category as b
 		ON
 			a.t_cno = b.t_cno
-		WHERE a.t_cno = 1
+		WHERE b.t_category = #{tCate}
 		ORDER BY 
 			a.t_regdate DESC
 	</select>
 	
 	<select id="selJavaView" resultType="tbVO">
 		SELECT
-			*
+			a.t_bno,
+			a.t_title,
+			a.t_content,
+			a.t_regdate,
+			b.t_category
 		FROM
-			tcode.t_board
-		WHERE
-			t_bno = #{t_bno }
+			tcode.t_board as a
+		INNER JOIN
+			tcode.t_category as b
+		ON
+			a.t_cno = b.t_cno
+		WHERE a.t_bno = #{bno }
+		ORDER BY 
+			a.t_regdate DESC
 	</select>
 	
 	<select id="categoryList" resultType="tbVO">
@@ -53,5 +62,14 @@
 				#{t_cno}
 			)
 	</insert>
+	
+	<update id="bCntAdd" parameterType="int">
+		UPDATE 
+			t_board
+		SET 
+			t_viewcnt = t_viewcnt + 1
+		WHERE
+			t_bno = #{bno}
+	</update>
 	
 </mapper>

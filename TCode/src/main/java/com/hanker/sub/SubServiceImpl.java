@@ -15,8 +15,8 @@ public class SubServiceImpl implements SubService{
 	private SubDAO subDAO;
 
 	@Override
-	public List<t_BoardVO> javaList() throws Exception {
-		return subDAO.javaList();
+	public List<t_BoardVO> javaList(String tCate) throws Exception {
+		return subDAO.javaList(tCate);
 	}
 
 	@Override
@@ -33,4 +33,16 @@ public class SubServiceImpl implements SubService{
 	public void insBoard(t_BoardVO tbVO) throws Exception {
 		subDAO.insBoard(tbVO);
 	}
+
+	@Override
+	public List<t_BoardVO> otherList() throws Exception {
+		return subDAO.otherList();
+	}
+
+	@Override
+	public void bCntAdd(int bno) throws Exception {
+		subDAO.bCntAdd(bno);
+	}
+	
+	
 }

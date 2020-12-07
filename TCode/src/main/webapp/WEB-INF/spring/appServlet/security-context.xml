@@ -9,9 +9,10 @@
 	<!-- Spring Security Setting -->
 	<security:http use-expressions="true">
 		<security:intercept-url pattern="/**" access="permitAll" />
+		<security:intercept-url pattern="/set/**" access="hasRole('ADMIN')" />
 		<security:form-login login-page="/login" login-processing-url="/loginCheck" default-target-url="/" authentication-failure-url="/login"
 						username-parameter="id" password-parameter="password" />
-		<security:logout logout-url="/logout" logout-success-url="/login/login"/>
+		<security:logout logout-url="/logout" logout-success-url="/" />
 		<security:csrf disabled="true"/>
 	</security:http>
 			

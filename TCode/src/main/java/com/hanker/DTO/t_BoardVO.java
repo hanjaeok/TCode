@@ -8,13 +8,33 @@ public class t_BoardVO {
 	private String t_title;		// 글 제목
 	private String t_content;	// 글 타이틀
 	private int t_cno;			// 카테고리 번호
+	private int t_viewcnt;		// 조회수
 	private Date t_regdate;		// 글 작성일
 	
+	private String t_category; 	 // 카테고리 (t_category 테이블)
+	private String t_use;		 // 사용여부
+	private String t_pcode; 	 // 소분류 코드 
 	
-	private String t_category; 	// 카테고리 (t_category 테이블)
 	
 	
-	
+	public int getT_viewcnt() {
+		return t_viewcnt;
+	}
+	public void setT_viewcnt(int t_viewcnt) {
+		this.t_viewcnt = t_viewcnt;
+	}
+	public String getT_pcode() {
+		return t_pcode;
+	}
+	public void setT_pcode(String t_pcode) {
+		this.t_pcode = t_pcode;
+	}
+	public String getT_use() {
+		return t_use;
+	}
+	public void setT_use(String t_use) {
+		this.t_use = t_use;
+	}
 	public String getT_category() {
 		return t_category;
 	}

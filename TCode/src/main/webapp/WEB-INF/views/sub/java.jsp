@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ include file="/WEB-INF/views/layout/header.jsp" %>
-<link href="../resources/css/sub.css" rel="stylesheet" />
+<link href="../../resources/css/sub.css" rel="stylesheet" />
 
         <div id="layoutSidenav">
             <div id="layoutSidenav_content">
             	<main>
                     <div class="container-fluid">
-            	 		<div class="lay-2" style="font-size:22px;">JAVA</div>
+            	 		<div class="lay-2" style="font-size:22px;">${title }</div>
                         <div class="breadcrumb mb-4" id="bdc">
                         	<table class="lay-2-body list" id="javaList">
                         		<thead>
@@ -16,7 +16,7 @@
                         				<th style="width:7%">Date</th>
                         			</tr>
                         		</thead>
-                        		<tbody>
+                        		<tbody style="line-height: 90%;">
                         		<c:forEach var="list" items="${list }" varStatus="status">
                         			<tr>
                         				<td>
@@ -44,7 +44,8 @@
 		            "last" : "마지막 페이지",
 		            "next" : ">",
 		            "previous" : "<"
-		        }
+		        },
+		        "emptyTable" : "작성된 글이 없습니다."
 		}
 		
 		$("#javaList").DataTable({

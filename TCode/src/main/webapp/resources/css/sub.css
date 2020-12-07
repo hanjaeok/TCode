@@ -100,3 +100,8 @@
 	height: 40px;
     margin-left: auto;
 }
+
+#p_content{
+	padding : 15px;
+	border : 1px solid #ddd;
+}

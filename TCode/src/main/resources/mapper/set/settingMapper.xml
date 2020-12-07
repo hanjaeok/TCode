@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="setMapper">
+	
+	<select id="lgCateList" resultType="hashMap">
+		<![CDATA[
+			SELECT
+				*
+			FROM
+				t_category
+			WHERE
+				t_pcode = 0
+		]]>
+	</select>
+	
+	<select id="sCateList" resultType="hashMap">
+		<![CDATA[
+			SELECT
+				*
+			FROM
+				t_category
+			WHERE
+				t_pcode != 0
+		]]>
+	</select>
+	
+	<insert id="addCategory" parameterType="tbVO">
+		INSERT INTO
+			t_category(
+				t_category,
+				t_pcode
+			)
+		VALUES(
+			#{t_category },
+			#{t_pcode }
+		)
+		
+	</insert>
+	
+</mapper>
