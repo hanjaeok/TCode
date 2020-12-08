@@ -18,4 +18,6 @@ public class HomeDAO {
 	public List<t_BoardVO> boardTenLim() throws Exception{
 		return sql.selectList("homeMapper.boardTenLim");
 	}
+	
+
 }

@@ -48,7 +48,7 @@
 						
 						for(var i = 0 ; i < rs.cList.length; i++){
 							
-							chtml = "<a class='nav-link collapsed' style='font-size: 18px;' href='#' data-toggle='collapse' data-target='#collapse"+result[i].t_category+"' aria-expanded='false' aria-controls='collapse"+result[i].t_category+"'>"
+							chtml = "<a class='nav-link collapsed' id="+result[i].t_category+" style='font-size: 18px;' href='#' data-toggle='collapse' data-target='#collapse"+result[i].t_category+"' aria-expanded='false' aria-controls='collapse"+result[i].t_category+"'>"
 								  + 	"<div class='sb-nav-link-icon'><i class='fas fa-book'></i></div>"
 								  + 		result[i].t_category
 								  + 	"<div class='sb-sidenav-collapse-arrow'><i class='fas fa-angle-down'></i></div>"

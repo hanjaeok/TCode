@@ -3,6 +3,8 @@ package com.hanker.home;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.hanker.DTO.t_BoardVO;
 
@@ -28,7 +32,6 @@ public class HomeController {
 	public String home(Model model) throws Exception{
 		
 		List<t_BoardVO> list = hs.boardTenLim();
-		
 		model.addAttribute("list", list);
 		
 		return "home";
@@ -39,6 +42,5 @@ public class HomeController {
 		
 		return "login/login";
 	}
-	
 	
 }
