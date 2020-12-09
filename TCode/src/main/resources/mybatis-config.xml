@@ -5,6 +5,7 @@
 	<typeAliases>
 		<typeAlias type="com.hanker.DTO.UserVO" alias="userVO" />
 		<typeAlias type="com.hanker.DTO.t_BoardVO" alias="tbVO" />
+		<typeAlias type="com.hanker.DTO.VisitCountVO" alias="vcVO" />
 	</typeAliases>
 </configuration>
 

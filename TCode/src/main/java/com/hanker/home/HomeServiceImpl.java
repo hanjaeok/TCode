@@ -18,4 +18,11 @@ public class HomeServiceImpl implements HomeService {
 	public List<t_BoardVO> boardTenLim() throws Exception {
 		return homeDAO.boardTenLim();
 	}
+
+	@Override
+	public t_BoardVO getBestView() throws Exception {
+		// TODO Auto-generated method stub
+		return homeDAO.getBestView();
+	}
+
 }

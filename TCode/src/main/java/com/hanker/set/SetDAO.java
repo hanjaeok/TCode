@@ -16,15 +16,4 @@ public class SetDAO {
 	@Inject
 	private SqlSession sql;
 	
-	public List<HashMap<String, Object>> lgCateList() throws Exception {
-		return sql.selectList("setMapper.lgCateList");
-	}
-
-	public List<HashMap<String, Object>> sCateList() throws Exception{
-		return sql.selectList("setMapper.sCateList");
-	}
-
-	public void addCategory(t_BoardVO tbVO) throws Exception{
-		sql.insert("setMapper.addCategory", tbVO);
-	}
 }

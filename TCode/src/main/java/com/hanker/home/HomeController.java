@@ -12,8 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.hanker.DTO.t_BoardVO;
 
@@ -32,7 +30,13 @@ public class HomeController {
 	public String home(Model model) throws Exception{
 		
 		List<t_BoardVO> list = hs.boardTenLim();
+		
+		
+		t_BoardVO tbVO = new t_BoardVO();
+		tbVO = hs.getBestView();
+		
 		model.addAttribute("list", list);
+		model.addAttribute("BEST", tbVO);
 		
 		return "home";
 	}
@@ -43,4 +47,15 @@ public class HomeController {
 		return "login/login";
 	}
 	
+	@RequestMapping(value="/sessionGet", method=RequestMethod.POST)
+	public String sessionGet(Model model, HttpServletRequest req, HttpSession session) throws Exception{
+		
+		int todayCnt = Integer.parseInt(session.getAttribute("todayCnt").toString());
+		int totalCnt = Integer.parseInt(session.getAttribute("totalCnt").toString());
+		
+		model.addAttribute("todayCnt", todayCnt);
+		model.addAttribute("totalCnt", totalCnt);
+		
+		return "jsonView";
+	}
 }

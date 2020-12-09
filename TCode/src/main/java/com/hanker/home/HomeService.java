@@ -8,4 +8,6 @@ public interface HomeService {
 
 	public List<t_BoardVO> boardTenLim() throws Exception;
 
+	public t_BoardVO getBestView() throws Exception;
+
 }

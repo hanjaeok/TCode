@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="homeMapper">
-	
 	<select id="boardTenLim" resultType="tbVO">
 		SELECT
 			a.t_bno,
@@ -19,5 +18,17 @@
 		ORDER BY 
 			a.t_regdate DESC
 		LIMIT 0, 10
+	</select>
+	
+	<select id="getBestBoard" resultType="tbVO">
+		<![CDATA[
+			SELECT
+				*
+			FROM
+				t_board
+			ORDER BY
+				t_viewcnt DESC
+			limit 0, 1
+		]]>
 	</select>
 </mapper>
