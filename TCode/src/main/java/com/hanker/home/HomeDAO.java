@@ -1,5 +1,6 @@
 package com.hanker.home;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -23,5 +24,10 @@ public class HomeDAO {
 	public t_BoardVO getBestView() throws Exception {
 		return sql.selectOne("homeMapper.getBestBoard");
 	}
+
+	public List<t_BoardVO> getCateCnt() throws Exception {
+		return sql.selectList("homeMapper.getCateCnt");
+	}
+
 
 }

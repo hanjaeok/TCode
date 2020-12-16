@@ -72,4 +72,13 @@
 			t_bno = #{bno}
 	</update>
 	
+	<update id="updCntUp" parameterType="tbVO">
+		UPDATE
+			t_category
+		SET
+			t_cnt = t_cnt + 1
+		WHERE
+			t_cno = #{t_cno}
+	</update>
+	
 </mapper>

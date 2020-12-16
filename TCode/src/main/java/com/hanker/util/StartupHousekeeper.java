@@ -25,6 +25,9 @@ public class StartupHousekeeper implements HttpSessionListener{
 		WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(session.getServletContext());
 		HttpServletRequest req = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest();
 		
+		
+		// --------------------------------------------- 조회 수
+		
 		UtilDAO utilDAO = (UtilDAO)wac.getBean("utilDAO");
 		VisitCountVO vcVO = new VisitCountVO(); 
 		vcVO.setVisit_ip(req.getRemoteAddr());
@@ -38,6 +41,7 @@ public class StartupHousekeeper implements HttpSessionListener{
 		
 		session.setAttribute("todayCnt", todayCnt);
 		session.setAttribute("totalCnt", totalCnt);
+		
 	}
 
 	@Override

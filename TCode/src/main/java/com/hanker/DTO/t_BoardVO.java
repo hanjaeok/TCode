@@ -14,9 +14,16 @@ public class t_BoardVO {
 	private String t_category; 	 // 카테고리 (t_category 테이블)
 	private String t_use;		 // 사용여부
 	private String t_pcode; 	 // 소분류 코드 
+	private int t_cnt; 			 // 글 개수
 	
 	
 	
+	public int getT_cnt() {
+		return t_cnt;
+	}
+	public void setT_cnt(int t_cnt) {
+		this.t_cnt = t_cnt;
+	}
 	public int getT_viewcnt() {
 		return t_viewcnt;
 	}

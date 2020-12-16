@@ -58,4 +58,16 @@ public class HomeController {
 		
 		return "jsonView";
 	}
+	
+	@RequestMapping(value="/sideData", method=RequestMethod.POST)
+	public String sideData(Model model, HttpServletRequest req) throws Exception{
+		
+		t_BoardVO tbVO = new t_BoardVO();
+		// 카테고리 글 개수 구하기
+		List<t_BoardVO> list = hs.getCateCnt();
+		
+		model.addAttribute("SC", list);
+		
+		return "jsonView";
+	}
 }

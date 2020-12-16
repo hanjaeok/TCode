@@ -31,4 +31,13 @@
 			limit 0, 1
 		]]>
 	</select>
+	
+	<select id="getCateCnt" resultType="tbVO">
+		<![CDATA[
+			SELECT
+				*
+			FROM
+				t_category
+		]]>
+	</select>
 </mapper>

@@ -43,6 +43,11 @@ public class SubServiceImpl implements SubService{
 	public void bCntAdd(int bno) throws Exception {
 		subDAO.bCntAdd(bno);
 	}
+
+	@Override
+	public void updCntUp(t_BoardVO tbVO) throws Exception {
+		subDAO.updCntUp(tbVO);
+	}
 	
 	
 }

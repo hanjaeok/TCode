@@ -21,7 +21,7 @@
                         	</div>
                         </div>
                         <div class="breadcrumb mb-4">
-                        	<div class="lay-2">BEST</div>
+                        	<div class="lay-2">BEST VIEW</div>
                         	<div class="lay-2-body list" id="javaList_wrapper">
 	                            <div id="javaList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
 	                        		<div class="javaDate">

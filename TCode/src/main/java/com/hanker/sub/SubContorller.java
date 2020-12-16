@@ -66,6 +66,9 @@ public class SubContorller {
 		
 		subsc.insBoard(tbVO);
 		
+		// 작성한 카테고리 글 개수 증가
+		subsc.updCntUp(tbVO);
+		
 		return "jsonView";
 	}
 	

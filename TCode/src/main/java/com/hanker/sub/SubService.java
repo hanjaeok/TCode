@@ -18,4 +18,6 @@ public interface SubService {
 
 	public void bCntAdd(int bno) throws Exception;
 
+	public void updCntUp(t_BoardVO tbVO) throws Exception;
+
 }

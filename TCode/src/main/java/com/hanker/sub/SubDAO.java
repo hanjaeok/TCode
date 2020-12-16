@@ -39,4 +39,8 @@ public class SubDAO {
 		sql.update("subMapper.bCntAdd", bno);
 	}
 
+	public void updCntUp(t_BoardVO tbVO) throws Exception{
+		sql.update("subMapper.updCntUp", tbVO);
+	}
+
 }

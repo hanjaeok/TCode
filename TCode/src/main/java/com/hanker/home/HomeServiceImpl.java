@@ -1,5 +1,6 @@
 package com.hanker.home;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -24,5 +25,11 @@ public class HomeServiceImpl implements HomeService {
 		// TODO Auto-generated method stub
 		return homeDAO.getBestView();
 	}
+
+	@Override
+	public List<t_BoardVO> getCateCnt() throws Exception {
+		return homeDAO.getCateCnt();
+	}
+
 
 }
